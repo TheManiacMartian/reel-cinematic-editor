@@ -1,6 +1,6 @@
 {
-    "name": "Reel",
-    "rootNamespace": "Reel",
+    "name": "Martian.Reel",
+    "rootNamespace": "Martian.Reel",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
