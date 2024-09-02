@@ -1,7 +1,9 @@
 {
     "name": "Martian.Reel",
     "rootNamespace": "Martian.Reel",
-    "references": [],
+    "references": [
+        "GUID:b8e24fd1eb19b4226afebb2810e3c19b"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

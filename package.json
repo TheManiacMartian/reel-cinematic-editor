@@ -5,7 +5,7 @@
     "description": "A node-based tool for creating dialogue trees and cinematic scenes in Unity. Easily manage branching narratives and character interactions with a visual, drag-and-drop interface, no coding required. Ideal for building immersive storytelling in your games.",
     "unity": "2022.1",
     "dependencies": {
-        
+        "com.github.siccity.xnode": "https://github.com/siccity/xNode.git"
     },
     "keywords": [
         "cinematic",
