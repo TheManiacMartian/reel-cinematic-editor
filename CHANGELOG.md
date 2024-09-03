@@ -1,3 +1,7 @@
+## [1.1.1] - 2024-09-03
+### Oops I forgot
+- Added Reel Director Prefab that can be imported into any scene.
+
 ## [1.1.0] - 2024-09-03
 ### Extremely Basic but Working
 - Added Dialogue Nodes that wait for input before moving next.
