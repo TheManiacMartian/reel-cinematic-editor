@@ -1,6 +1,6 @@
 {
     "name": "com.martian.reel",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "displayName": "Reel Cinematic Editor",
     "description": "A node-based tool for creating dialogue trees and cinematic scenes in Unity. Easily manage branching narratives and character interactions with a visual, drag-and-drop interface, no coding required. Ideal for building immersive storytelling in your games.",
     "unity": "2022.1",
