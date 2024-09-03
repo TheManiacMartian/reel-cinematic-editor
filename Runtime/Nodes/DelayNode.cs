@@ -5,13 +5,18 @@ using XNode;
 
 namespace Martian.Reel
 {
-    /// <summary>
-    /// the exit point of all reel graphs
-    /// </summary>
-    [NodeTint(0.7f, 0.2f, 0.2f)]
-    public class ExitNode : Node
+    public class DelayNode : ReelNode
     {
-        [Input] public EmptyPort Exit;
+        [Input] public float Delay;
+
+        public override IEnumerator NodeSequence(ReelDirector director)
+        {
+            // clear dialogue information
+            director.UpdateDialogueInformation(new Dictionary<string, string>());
+
+            // wait for the delay seconds
+            yield return new WaitForSeconds(Delay);
+        }
 
         // Use this for initialization
         protected override void Init()

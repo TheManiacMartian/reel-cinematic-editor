@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Andrew_ReelCharacter
   m_EditorClassIdentifier: 
   CharacterName: Andrew
+  NameColor: {r: 0.27358478, g: 0.5970118, b: 1, a: 1}

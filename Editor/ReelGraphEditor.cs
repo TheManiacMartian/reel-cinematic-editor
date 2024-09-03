@@ -19,7 +19,21 @@ namespace Martian.Reel.Editor
         {
             if (type.Namespace == "Martian.Reel")
             {
-                return base.GetNodeMenuName(type).Replace("Martian/Reel/", "");
+                // make execptions for nodes we don't want created
+                // entry node
+                if(type.Name == "EntryNode")
+                {
+                    return null;
+                }
+                else if (type.Name == "ReelNode")
+                {
+                    return null;
+                }
+                else
+                {
+                    return base.GetNodeMenuName(type).Replace("Martian/Reel/", "");
+
+                }
             }
 
             else return null;

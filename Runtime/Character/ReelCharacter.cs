@@ -8,6 +8,6 @@ namespace Martian.Reel
     public class ReelCharacter : ScriptableObject
     {
         public string CharacterName = "Character Name";
-
+        public Color NameColor = Color.white;
     }
 }
