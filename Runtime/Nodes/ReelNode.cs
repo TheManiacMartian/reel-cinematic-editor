@@ -12,6 +12,10 @@ namespace Martian.Reel
         [Input] public EmptyPort In;
         [Output] public EmptyPort Out;
 
+        public bool IsSynchronous = true;
+
+        protected ReelDirector _reelDirector;
+
         /// <summary>
         /// The actual functionality in a coroutine of the node.
         /// </summary>
@@ -20,6 +24,8 @@ namespace Martian.Reel
         {
             // clear dialogue information
             director.UpdateDialogueInformation(new Dictionary<string, string>());
+
+            _reelDirector = director;
             yield return null;
         }
 

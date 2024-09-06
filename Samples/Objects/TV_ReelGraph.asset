@@ -1,0 +1,785 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5849050897745544021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e50d69cff30254ea7836a3f7378312, type: 3}
+  m_Name: Get Subject
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 456}
+  ports:
+    keys:
+    - SubjectId
+    - Subject
+    values:
+    - _fieldName: SubjectId
+      _node: {fileID: -5849050897745544021}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Subject
+      _node: {fileID: -5849050897745544021}
+      _typeQualifiedName: Martian.Reel.ReelSubject, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Subject
+        node: {fileID: -3604582159009965548}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SubjectId: Player
+  Subject: {fileID: 0}
+--- !u!114 &-5142608770447177837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc6859fbccbdba44b79761286526de8, type: 3}
+  m_Name: Speech 4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1832, y: 184}
+  ports:
+    keys:
+    - In
+    - Out
+    - Line
+    - Speaker
+    values:
+    - _fieldName: In
+      _node: {fileID: -5142608770447177837}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -1648874465383410}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -5142608770447177837}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: -5142608770447177837}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Speaker
+      _node: {fileID: -5142608770447177837}
+      _typeQualifiedName: Martian.Reel.ReelCharacter, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+  Line: BOO! Did I get you?
+  Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
+  Emotion: Default
+--- !u!114 &-4510211122724575147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4152323f98420c4eb7f0a0efe47117d, type: 3}
+  m_Name: Camera Orbit Subject
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 88, y: 168}
+  ports:
+    keys:
+    - In
+    - Out
+    - Subject
+    - PositionOffset
+    - RotationOffset
+    - BlendTime
+    - FOV
+    values:
+    - _fieldName: In
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 2667965517957596827}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 1969141118289615508}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Subject
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: Martian.Reel.ReelSubject, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Subject
+        node: {fileID: 8415530996901196702}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PositionOffset
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RotationOffset
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: BlendTime
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: FOV
+      _node: {fileID: -4510211122724575147}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 0
+  Subject: {fileID: 0}
+  PositionOffset: {x: 0, y: 0, z: -1}
+  RotationOffset: {x: 0, y: 0, z: -5}
+  FOV: 60
+  BlendTime: 1
+  PreviewObject: {fileID: 0}
+--- !u!114 &-3604582159009965548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4152323f98420c4eb7f0a0efe47117d, type: 3}
+  m_Name: Camera Orbit Subject
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: 168}
+  ports:
+    keys:
+    - In
+    - Out
+    - Subject
+    - PositionOffset
+    - RotationOffset
+    - BlendTime
+    - FOV
+    values:
+    - _fieldName: In
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 1969141118289615508}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 3297598478564297285}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Subject
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: Martian.Reel.ReelSubject, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Subject
+        node: {fileID: -5849050897745544021}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PositionOffset
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RotationOffset
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: BlendTime
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: FOV
+      _node: {fileID: -3604582159009965548}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 0
+  Subject: {fileID: 0}
+  PositionOffset: {x: 0, y: 0.5, z: 1}
+  RotationOffset: {x: 0, y: 180, z: 0}
+  FOV: 60
+  BlendTime: 1
+  PreviewObject: {fileID: 0}
+--- !u!114 &-2197540371915675659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4766d17ba03164cbb5f882fcafc85b, type: 3}
+  m_Name: Entry
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -552, y: 168}
+  ports:
+    keys:
+    - Out
+    - In
+    values:
+    - _fieldName: Out
+      _node: {fileID: -2197540371915675659}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 2667965517957596827}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: In
+      _node: {fileID: -2197540371915675659}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+--- !u!114 &-1648874465383410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4152323f98420c4eb7f0a0efe47117d, type: 3}
+  m_Name: Camera Orbit Subject
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1544, y: 184}
+  ports:
+    keys:
+    - In
+    - Out
+    - Subject
+    - PositionOffset
+    - RotationOffset
+    - BlendTime
+    - FOV
+    values:
+    - _fieldName: In
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 1228395143972712837}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -5142608770447177837}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Subject
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: Martian.Reel.ReelSubject, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Subject
+        node: {fileID: 8415530996901196702}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PositionOffset
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RotationOffset
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: BlendTime
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: FOV
+      _node: {fileID: -1648874465383410}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 0
+  Subject: {fileID: 0}
+  PositionOffset: {x: 0, y: 0, z: -1}
+  RotationOffset: {x: 0, y: 0, z: -5}
+  FOV: 40
+  BlendTime: 0
+  PreviewObject: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde92afa83ddf694f81305d1e6b16ae0, type: 3}
+  m_Name: TV_ReelGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2197540371915675659}
+  - {fileID: 2667965517957596827}
+  - {fileID: 1969141118289615508}
+  - {fileID: 3297598478564297285}
+  - {fileID: 1228395143972712837}
+  - {fileID: -5142608770447177837}
+  - {fileID: 8415530996901196702}
+  - {fileID: -4510211122724575147}
+  - {fileID: -1648874465383410}
+  - {fileID: -3604582159009965548}
+  - {fileID: -5849050897745544021}
+  Current: {fileID: 0}
+--- !u!114 &1228395143972712837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41646552f84cbf40ae3abbf98a62642, type: 3}
+  m_Name: Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1256, y: 184}
+  ports:
+    keys:
+    - In
+    - Out
+    - Delay
+    values:
+    - _fieldName: In
+      _node: {fileID: 1228395143972712837}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 3297598478564297285}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 1228395143972712837}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -1648874465383410}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Delay
+      _node: {fileID: 1228395143972712837}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+  Delay: 2
+--- !u!114 &1969141118289615508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc6859fbccbdba44b79761286526de8, type: 3}
+  m_Name: Speech 2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: 168}
+  ports:
+    keys:
+    - In
+    - Out
+    - Line
+    - Speaker
+    values:
+    - _fieldName: In
+      _node: {fileID: 1969141118289615508}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -4510211122724575147}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 1969141118289615508}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -3604582159009965548}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: 1969141118289615508}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Speaker
+      _node: {fileID: 1969141118289615508}
+      _typeQualifiedName: Martian.Reel.ReelCharacter, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+  Line: WOW ! This is another test dialogue.
+  Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
+  Emotion: Default
+--- !u!114 &2667965517957596827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc6859fbccbdba44b79761286526de8, type: 3}
+  m_Name: Speech 1
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 168}
+  ports:
+    keys:
+    - In
+    - Line
+    - Out
+    - Speaker
+    values:
+    - _fieldName: In
+      _node: {fileID: 2667965517957596827}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -2197540371915675659}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: 2667965517957596827}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 2667965517957596827}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -4510211122724575147}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Speaker
+      _node: {fileID: 2667965517957596827}
+      _typeQualifiedName: Martian.Reel.ReelCharacter, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+  Line: Hello, this is a test dialogue
+  Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
+  Emotion: Default
+--- !u!114 &3297598478564297285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc6859fbccbdba44b79761286526de8, type: 3}
+  m_Name: Speech 3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 968, y: 184}
+  ports:
+    keys:
+    - In
+    - Out
+    - Line
+    - Speaker
+    values:
+    - _fieldName: In
+      _node: {fileID: 3297598478564297285}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -3604582159009965548}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 3297598478564297285}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 1228395143972712837}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: 3297598478564297285}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Speaker
+      _node: {fileID: 3297598478564297285}
+      _typeQualifiedName: Martian.Reel.ReelCharacter, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+  Line: I am going to wait a bit before saying the next thing...
+  Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
+  Emotion: Default
+--- !u!114 &8415530996901196702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e50d69cff30254ea7836a3f7378312, type: 3}
+  m_Name: Get Subject
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -216, y: 56}
+  ports:
+    keys:
+    - SubjectId
+    - Subject
+    values:
+    - _fieldName: SubjectId
+      _node: {fileID: 8415530996901196702}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Subject
+      _node: {fileID: 8415530996901196702}
+      _typeQualifiedName: Martian.Reel.ReelSubject, Martian.Reel, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Subject
+        node: {fileID: -4510211122724575147}
+        reroutePoints: []
+      - fieldName: Subject
+        node: {fileID: -1648874465383410}
+        reroutePoints:
+        - {x: 1456, y: 128}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SubjectId: TV
+  Subject: {fileID: 0}

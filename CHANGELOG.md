@@ -1,3 +1,10 @@
+## [1.2.1] - 2024-09-06
+### Cameras and Subjects
+- Added Reel Subjects that can be referenced in reel graphs. Just add the reel subject component to any game object and enter any tag.
+- Added the Reel Camera that can focus on subjects through the reel graph.
+- Added a preview window tool under Window > Reel > Camera Preview that will let you (kind of) preview the camera position and angle variables. You can copy and paste the information between the node and preview window.
+- Added a "Is Synchronous" variable to Reel Nodes that will define whether or not the reel graph will wait for the node to complete before continuing.
+
 ## [1.1.1] - 2024-09-03
 ### Oops I forgot
 - Added Reel Director Prefab that can be imported into any scene.

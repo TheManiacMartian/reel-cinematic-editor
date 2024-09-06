@@ -4,7 +4,7 @@ using Codice.CM.Client.Differences.Merge;
 using UnityEngine;
 using XNode;
 
-namespace Martian.Reel
+namespace Martian.Reel.Dialogue
 {
     //[NodeTint(0f, 0.5f, 0.75f)]
     [NodeWidth(260)]

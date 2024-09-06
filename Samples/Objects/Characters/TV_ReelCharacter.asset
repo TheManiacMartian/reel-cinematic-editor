@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 748525a4f2dc1144bbac01153f9581de, type: 3}
-  m_Name: Andrew_ReelCharacter
+  m_Name: TV_ReelCharacter
   m_EditorClassIdentifier: 
-  CharacterName: Andrew
-  NameColor: {r: 0.27358478, g: 0.5970118, b: 1, a: 1}
+  CharacterName: Guy on TV
+  NameColor: {r: 0.7208526, g: 0.9150943, b: 0.8957421, a: 1}

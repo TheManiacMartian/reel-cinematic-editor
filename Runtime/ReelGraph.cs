@@ -20,7 +20,15 @@ public class ReelGraph : NodeGraph {
         // repeat those steps.
         while(Current != null)
         {
-            yield return Current.NodeSequence(director);
+            if (Current.IsSynchronous)
+            {
+                yield return Current.NodeSequence(director);
+
+            }
+            else
+            {
+                director.StartAsyncReelNode(Current);    
+            }
 
             Current = Current.GetNextNode();
 

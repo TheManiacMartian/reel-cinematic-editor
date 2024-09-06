@@ -17,7 +17,7 @@ namespace Martian.Reel.Editor
         /// <returns></returns>
         public override string GetNodeMenuName(Type type)
         {
-            if (type.Namespace == "Martian.Reel")
+            if (type.Namespace.StartsWith("Martian.Reel"))
             {
                 // make execptions for nodes we don't want created
                 // entry node
