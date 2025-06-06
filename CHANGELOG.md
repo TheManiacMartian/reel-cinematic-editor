@@ -1,3 +1,7 @@
+## [1.3.1] - 2025-06-06
+### Hotfix
+- Fixed error when nothing was subscribed to the OnReelStart and OnReelEnd events.
+
 ## [1.3.0] - 2025-06-06
 ### CSV file support
 - Added "Get CSV file" and "Get Line from ID" that allow for dialogue lines to be gotten from CSV files, allowing for easy editing of entire scripts.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Get CSV File
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -856, y: 696}
+  position: {x: -824, y: 696}
   ports:
     keys:
     - File

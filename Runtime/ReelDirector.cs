@@ -85,7 +85,7 @@ namespace Martian.Reel
             _reelCamera.GetComponent<Camera>().fieldOfView = 60;
 
             // invoke event
-            OnReelStart.Invoke();
+            OnReelStart?.Invoke();
 
             // start the reel
             StartCoroutine(reelGraph.DoReel(this, OnReelComplete));
@@ -108,7 +108,7 @@ namespace Martian.Reel
             _reelCamera.gameObject.SetActive(false);
 
             // invoke event
-            OnReelEnd.Invoke();
+            OnReelEnd?.Invoke();
 
             // clear graph
             _currentGraph = null;
