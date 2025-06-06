@@ -1,3 +1,9 @@
+## [1.3.0] - 2025-06-06
+### CSV file support
+- Added "Get CSV file" and "Get Line from ID" that allow for dialogue lines to be gotten from CSV files, allowing for easy editing of entire scripts.
+- Tested with CSV exports from google sheets, simply have the first column as a id for the line and the second column as the line, each row should be a seperate line.
+- Different languages planned later down the line for the CSV file support.
+
 ## [1.2.1] - 2024-09-06
 ### Cameras and Subjects
 - Updated README

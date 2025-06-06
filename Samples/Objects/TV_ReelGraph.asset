@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7189476964745495843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df726b7cd9226d6408a83e4668aac0ad, type: 3}
+  m_Name: Get CSV File
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -856, y: 696}
+  ports:
+    keys:
+    - File
+    - Dialogues
+    values:
+    - _fieldName: File
+      _node: {fileID: -7189476964745495843}
+      _typeQualifiedName: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Dialogues
+      _node: {fileID: -7189476964745495843}
+      _typeQualifiedName: Martian.Reel.Dialogue.CSVDialogueDictionary, Martian.Reel,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Dialogues
+        node: {fileID: -4266536654422976864}
+        reroutePoints: []
+      - fieldName: Dialogues
+        node: {fileID: 1905181611488086320}
+        reroutePoints:
+        - {x: -320, y: 512}
+      - fieldName: Dialogues
+        node: {fileID: -2557790530754219738}
+        reroutePoints:
+        - {x: -64, y: 640}
+      - fieldName: Dialogues
+        node: {fileID: -4381574722118852874}
+        reroutePoints:
+        - {x: -52.83105, y: 753.7769}
+        - {x: 1062.8762, y: 780.43207}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  File: {fileID: 4900000, guid: fc50f3328bd6d814eb9771b579f2fa0a, type: 3}
 --- !u!114 &-5849050897745544021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +142,10 @@ MonoBehaviour:
       _node: {fileID: -5142608770447177837}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: Line
+        node: {fileID: -4381574722118852874}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -209,6 +266,117 @@ MonoBehaviour:
   FOV: 60
   BlendTime: 1
   PreviewObject: {fileID: 0}
+--- !u!114 &-4381574722118852874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d114e6ad66fe498583b3768824bd4, type: 3}
+  m_Name: Get Line From ID
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1240, y: 584}
+  ports:
+    keys:
+    - Dialogues
+    - LineID
+    - Line
+    values:
+    - _fieldName: Dialogues
+      _node: {fileID: -4381574722118852874}
+      _typeQualifiedName: Martian.Reel.Dialogue.CSVDialogueDictionary, Martian.Reel,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Dialogues
+        node: {fileID: -7189476964745495843}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: LineID
+      _node: {fileID: -4381574722118852874}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: -4381574722118852874}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Line
+        node: {fileID: -5142608770447177837}
+        reroutePoints:
+        - {x: 1792.1641, y: 659.0215}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  LineID: test_1_4
+  Line: 
+--- !u!114 &-4266536654422976864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d114e6ad66fe498583b3768824bd4, type: 3}
+  m_Name: Get Line From ID
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -552, y: 360}
+  ports:
+    keys:
+    - Dialogues
+    - LineID
+    - Line
+    values:
+    - _fieldName: Dialogues
+      _node: {fileID: -4266536654422976864}
+      _typeQualifiedName: Martian.Reel.Dialogue.CSVDialogueDictionary, Martian.Reel,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Dialogues
+        node: {fileID: -7189476964745495843}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: LineID
+      _node: {fileID: -4266536654422976864}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: -4266536654422976864}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Line
+        node: {fileID: 2667965517957596827}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  LineID: test_1_1
+  Line: 
 --- !u!114 &-3604582159009965548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +480,61 @@ MonoBehaviour:
   FOV: 60
   BlendTime: 1
   PreviewObject: {fileID: 0}
+--- !u!114 &-2557790530754219738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d114e6ad66fe498583b3768824bd4, type: 3}
+  m_Name: Get Line From ID
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: 616}
+  ports:
+    keys:
+    - Dialogues
+    - LineID
+    - Line
+    values:
+    - _fieldName: Dialogues
+      _node: {fileID: -2557790530754219738}
+      _typeQualifiedName: Martian.Reel.Dialogue.CSVDialogueDictionary, Martian.Reel,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Dialogues
+        node: {fileID: -7189476964745495843}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: LineID
+      _node: {fileID: -2557790530754219738}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: -2557790530754219738}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Line
+        node: {fileID: 3297598478564297285}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  LineID: test_1_3
+  Line: 
 --- !u!114 &-2197540371915675659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +703,11 @@ MonoBehaviour:
   - {fileID: -1648874465383410}
   - {fileID: -3604582159009965548}
   - {fileID: -5849050897745544021}
+  - {fileID: -7189476964745495843}
+  - {fileID: -4266536654422976864}
+  - {fileID: 1905181611488086320}
+  - {fileID: -2557790530754219738}
+  - {fileID: -4381574722118852874}
   Current: {fileID: 0}
 --- !u!114 &1228395143972712837
 MonoBehaviour:
@@ -536,6 +764,61 @@ MonoBehaviour:
       _dynamic: 0
   IsSynchronous: 1
   Delay: 2
+--- !u!114 &1905181611488086320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d114e6ad66fe498583b3768824bd4, type: 3}
+  m_Name: Get Line From ID
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 88, y: 472}
+  ports:
+    keys:
+    - Dialogues
+    - LineID
+    - Line
+    values:
+    - _fieldName: Dialogues
+      _node: {fileID: 1905181611488086320}
+      _typeQualifiedName: Martian.Reel.Dialogue.CSVDialogueDictionary, Martian.Reel,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Dialogues
+        node: {fileID: -7189476964745495843}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: LineID
+      _node: {fileID: 1905181611488086320}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Line
+      _node: {fileID: 1905181611488086320}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Line
+        node: {fileID: 1969141118289615508}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  LineID: test_1_2
+  Line: 
 --- !u!114 &1969141118289615508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,7 +868,10 @@ MonoBehaviour:
       _node: {fileID: 1969141118289615508}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: Line
+        node: {fileID: 1905181611488086320}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -640,7 +926,10 @@ MonoBehaviour:
       _node: {fileID: 2667965517957596827}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: Line
+        node: {fileID: -4266536654422976864}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -667,7 +956,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   IsSynchronous: 1
-  Line: Hello, this is a test dialogue
+  Line: dfsg
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
 --- !u!114 &3297598478564297285
@@ -719,7 +1008,10 @@ MonoBehaviour:
       _node: {fileID: 3297598478564297285}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: Line
+        node: {fileID: -2557790530754219738}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0

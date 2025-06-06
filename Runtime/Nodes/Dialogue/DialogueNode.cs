@@ -29,10 +29,18 @@ namespace Martian.Reel.Dialogue
             // subscribe to reel input
             director.OnReelInput += GetReelInput;
 
+            // get line if connected
+            string line = Line;
+
+            if (GetPort("Line").IsConnected)
+            {
+                line = GetPort("Line").GetInputValue<string>(); 
+            }
+
             // update dialogue information
             Dictionary<string, string> dialogueInformation = new Dictionary<string, string>
             {
-                { "dialogue", Line },
+                { "dialogue", line },
                 { "speaker", Speaker.CharacterName },
                 { "speakerColor", ColorUtility.ToHtmlStringRGB(Speaker.NameColor) }
             };
