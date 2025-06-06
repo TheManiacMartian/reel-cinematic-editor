@@ -1,3 +1,7 @@
+## [1.3.2] - 2025-06-06
+### Events
+- Added "Wait for Event" which will essentially pause the graph until a certain event is triggered via script.
+
 ## [1.3.1] - 2025-06-06
 ### Hotfix
 - Fixed error when nothing was subscribed to the OnReelStart and OnReelEnd events.

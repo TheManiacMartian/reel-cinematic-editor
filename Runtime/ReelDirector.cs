@@ -38,6 +38,8 @@ namespace Martian.Reel
 
         public Action OnReelStart, OnReelEnd;
 
+        public Action<string> OnEventTriggered;
+
         private ReelGraph _currentGraph;
 
         private Dictionary<string, ReelSubject> _reelSubjects = new Dictionary<string, ReelSubject>();
@@ -120,6 +122,11 @@ namespace Martian.Reel
             {
                 view.ViewUpdate(dialogueInfo);
             }
+        }
+
+        public void TriggerEvent(string eventName)
+        {
+            OnEventTriggered?.Invoke(eventName);
         }
 
         public bool GetIsReelRunning()
