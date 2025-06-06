@@ -14,7 +14,7 @@ namespace Martian.Reel
         {
             base.Init();
 
-            ReelDirector.Instance.OnEventTriggered += EventTriggered;
+            
         }
 
         private void EventTriggered(string eventName)
@@ -28,7 +28,14 @@ namespace Martian.Reel
 
         public override IEnumerator NodeSequence(ReelDirector director)
         {
+
+            _eventTriggered = false;
+            ReelDirector.Instance.OnEventTriggered += EventTriggered;
+
             yield return new WaitWhile(() => _eventTriggered == false);
+
+            ReelDirector.Instance.OnEventTriggered -= EventTriggered;
+
         }
 
     }
