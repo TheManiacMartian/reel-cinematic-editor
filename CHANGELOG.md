@@ -1,3 +1,7 @@
+## [1.3.3] - 2025-06-09
+### Events
+- Added "Trigger Event" node which will trigger an event from within the reel graph.
+
 ## [1.3.2] - 2025-06-06
 ### Events
 - Added "Wait for Event" which will essentially pause the graph until a certain event is triggered via script.
