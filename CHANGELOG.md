@@ -1,3 +1,7 @@
+## [1.3.5] - 2025-06-09
+### Dialogue that doesn't need button
+- Added options to the Dialogue Node 
+
 ## [1.3.4] - 2025-06-09
 ### Events
 - Added "Clear Dialogue" options to "Trigger Event" and "Wait for Event" that gives the option to clear the dialogue view when it hits.

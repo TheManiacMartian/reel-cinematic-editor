@@ -116,6 +116,7 @@ MonoBehaviour:
     - Out
     - Line
     - Speaker
+    - RequireButtonPress
     values:
     - _fieldName: In
       _node: {fileID: -5142608770447177837}
@@ -159,8 +160,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: RequireButtonPress
+      _node: {fileID: -5142608770447177837}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: BOO! Did I get you?
+  RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
 --- !u!114 &-4510211122724575147
@@ -839,6 +850,7 @@ MonoBehaviour:
     - Out
     - Line
     - Speaker
+    - RequireButtonPress
     values:
     - _fieldName: In
       _node: {fileID: 1969141118289615508}
@@ -885,8 +897,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: RequireButtonPress
+      _node: {fileID: 1969141118289615508}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: WOW ! This is another test dialogue.
+  RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
 --- !u!114 &2667965517957596827
@@ -909,6 +931,7 @@ MonoBehaviour:
     - Line
     - Out
     - Speaker
+    - RequireButtonPress
     values:
     - _fieldName: In
       _node: {fileID: 2667965517957596827}
@@ -955,8 +978,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: RequireButtonPress
+      _node: {fileID: 2667965517957596827}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: dfsg
+  RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
 --- !u!114 &3297598478564297285
@@ -979,6 +1012,7 @@ MonoBehaviour:
     - Out
     - Line
     - Speaker
+    - RequireButtonPress
     values:
     - _fieldName: In
       _node: {fileID: 3297598478564297285}
@@ -1025,8 +1059,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: RequireButtonPress
+      _node: {fileID: 3297598478564297285}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: I am going to wait a bit before saying the next thing...
+  RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
 --- !u!114 &8415530996901196702

@@ -14,6 +14,8 @@ namespace Martian.Reel.Dialogue
         [Header("Dialogue Settings")]
         [TextArea(3, 10)]
         [Input] public string Line;
+        [Input] public float BaseDelay = 0.1f;
+        [Input] public bool RequireButtonPress = true;
 
         [Header("Character Settings")]
         [Input] public ReelCharacter Speaker;
@@ -47,7 +49,9 @@ namespace Martian.Reel.Dialogue
 
             director.UpdateDialogueInformation(dialogueInformation);
 
-            while(_inputRecieved == false)
+            yield return new WaitForSeconds(BaseDelay);
+
+            while(_inputRecieved == false && RequireButtonPress)
             {
                 yield return null;
             }
