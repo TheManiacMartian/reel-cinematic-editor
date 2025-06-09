@@ -1,3 +1,7 @@
+## [1.3.4] - 2025-06-09
+### Events
+- Added "Clear Dialogue" options to "Trigger Event" and "Wait for Event" that gives the option to clear the dialogue view when it hits.
+
 ## [1.3.3] - 2025-06-09
 ### Events
 - Added "Trigger Event" node which will trigger an event from within the reel graph.

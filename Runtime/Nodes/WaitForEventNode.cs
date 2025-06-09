@@ -7,6 +7,8 @@ namespace Martian.Reel
     public class WaitForEventNode : ReelNode
     {
         [Input] public string EventName;
+        [Input] public bool ClearDialogue;
+
 
         private bool _eventTriggered = false;
 
@@ -31,6 +33,12 @@ namespace Martian.Reel
 
             _eventTriggered = false;
             ReelDirector.Instance.OnEventTriggered += EventTriggered;
+
+            if (ClearDialogue)
+            {
+                // clear dialogue information
+                director.UpdateDialogueInformation(new Dictionary<string, string>());
+            }
 
             yield return new WaitWhile(() => _eventTriggered == false);
 

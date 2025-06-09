@@ -9,6 +9,7 @@ namespace Martian.Reel
     {
         [Input] public float Delay;
         [Input] public string EventName;
+        [Input] public bool ClearDialogue;
         
 
         public override IEnumerator NodeSequence(ReelDirector director)
@@ -16,8 +17,12 @@ namespace Martian.Reel
             // trigger event
             director.TriggerEvent(EventName);
 
-            // clear dialogue information
-            director.UpdateDialogueInformation(new Dictionary<string, string>());
+            if(ClearDialogue)
+            {
+                // clear dialogue information
+                director.UpdateDialogueInformation(new Dictionary<string, string>());
+            }
+            
 
             // wait for the delay seconds
             yield return new WaitForSeconds(Delay);
