@@ -1,3 +1,7 @@
+## [1.3.6] - 2025-06-12
+### Build error fix
+- Fixed some build errors with some imports
+
 ## [1.3.5] - 2025-06-09
 ### Dialogue that doesn't need button
 - Added options to the Dialogue Node 
