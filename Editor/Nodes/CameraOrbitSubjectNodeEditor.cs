@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using Martian.Reel.Subject;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 using XNodeEditor;
 
 namespace Martian.Reel.Editor
