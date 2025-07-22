@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodiceApp.EventTracking.Plastic;
 using UnityEngine;
 
 namespace Martian.Reel
@@ -129,6 +130,9 @@ namespace Martian.Reel
             // invoke event
             OnReelEnd?.Invoke();
 
+            // remove from the event portals
+            _eventPortals.Clear();
+
             // clear graph
             _currentGraph = null;
         }
@@ -153,7 +157,7 @@ namespace Martian.Reel
             OnEventTriggered?.Invoke(eventName);
 
             // if the event is apart of a portal, we will activate the portal
-            if(_eventPortals.ContainsKey(eventName))
+            if(_eventPortals.ContainsKey(eventName) && _currentGraph != null)
             {
                 TriggerEventPortal(eventName);
             }

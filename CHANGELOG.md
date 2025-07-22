@@ -1,3 +1,7 @@
+## [1.3.8] - 2025-07-22
+### Event Portals Fix
+- Fixed Event Portals so they get cleared and won't run after the graph is completed.
+
 ## [1.3.7] - 2025-07-22
 ### Event Portals
 - Added Event Portals, these allow skipping to certain nodes if an event is triggered while the portal is active. After a portal is used it is then discarded and needs to be setup again (this also
