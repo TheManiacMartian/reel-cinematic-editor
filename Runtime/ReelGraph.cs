@@ -37,6 +37,33 @@ public class ReelGraph : NodeGraph {
         // we are done
         onCompleteCallback.Invoke();
     }
+
+    public IEnumerator DoReel(ReelNode startNode, ReelDirector director, Action onCompleteCallback)
+    {
+        // set start node ass current
+        Current = startNode;
+
+        // for each node await its sequence, then get the following node, and await its sequence.
+        // repeat those steps.
+        while (Current != null)
+        {
+            if (Current.IsSynchronous)
+            {
+                yield return Current.NodeSequence(director);
+
+            }
+            else
+            {
+                director.StartAsyncReelNode(Current);
+            }
+
+            Current = Current.GetNextNode();
+
+        }
+
+        // we are done
+        onCompleteCallback.Invoke();
+    }
 }
 
 [Serializable]

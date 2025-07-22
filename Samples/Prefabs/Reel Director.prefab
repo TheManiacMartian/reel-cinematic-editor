@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _reelInput: 101
+  _dialogueInputPrompt: {fileID: 2799908942865561025}
   _views:
   - {fileID: 2810022358947883654}
   - {fileID: 8463862892706783708}

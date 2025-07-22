@@ -1,3 +1,8 @@
+## [1.3.7] - 2025-07-22
+### Event Portals
+- Added Event Portals, these allow skipping to certain nodes if an event is triggered while the portal is active. After a portal is used it is then discarded and needs to be setup again (this also
+allows for looping graphs).
+
 ## [1.3.6] - 2025-06-12
 ### Build error fix
 - Fixed some build errors with some imports

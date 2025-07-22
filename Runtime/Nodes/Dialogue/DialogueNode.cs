@@ -27,6 +27,9 @@ namespace Martian.Reel.Dialogue
             // set input recieved to false
             _inputRecieved = false;
 
+            // show or hide prompt
+            director.SetPromptShow(RequireButtonPress);
+
             // subscribe to reel input
             director.OnReelInput += GetReelInput;
 

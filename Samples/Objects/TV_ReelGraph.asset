@@ -117,6 +117,7 @@ MonoBehaviour:
     - Line
     - Speaker
     - RequireButtonPress
+    - BaseDelay
     values:
     - _fieldName: In
       _node: {fileID: -5142608770447177837}
@@ -169,8 +170,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: BaseDelay
+      _node: {fileID: -5142608770447177837}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: BOO! Did I get you?
+  BaseDelay: 0.1
   RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
@@ -559,7 +570,7 @@ MonoBehaviour:
   m_Name: Entry
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -552, y: 168}
+  position: {x: -808, y: 168}
   ports:
     keys:
     - Out
@@ -571,7 +582,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 2667965517957596827}
+        node: {fileID: -1705261664702724870}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -587,6 +598,87 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   IsSynchronous: 1
+--- !u!114 &-1705261664702724870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674d03c93b4af1e4f922ffcd64f18262, type: 3}
+  m_Name: Event Portal
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -536, y: 152}
+  ports:
+    keys:
+    - Delay
+    - EventName
+    - PortalNode
+    - In
+    - Out
+    values:
+    - _fieldName: Delay
+      _node: {fileID: -1705261664702724870}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: EventName
+      _node: {fileID: -1705261664702724870}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PortalNode
+      _node: {fileID: -1705261664702724870}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -1648874465383410}
+        reroutePoints:
+        - {x: -240, y: 16}
+        - {x: 1446.4495, y: 22.164936}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: In
+      _node: {fileID: -1705261664702724870}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -2197540371915675659}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -1705261664702724870}
+      _typeQualifiedName: EmptyPort, Martian.Reel, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 2667965517957596827}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  IsSynchronous: 1
+  Delay: 0
+  EventName: test_portal
 --- !u!114 &-1648874465383410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +710,9 @@ MonoBehaviour:
       connections:
       - fieldName: Out
         node: {fileID: 1228395143972712837}
+        reroutePoints: []
+      - fieldName: PortalNode
+        node: {fileID: -1705261664702724870}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -719,7 +814,8 @@ MonoBehaviour:
   - {fileID: 1905181611488086320}
   - {fileID: -2557790530754219738}
   - {fileID: -4381574722118852874}
-  Current: {fileID: 0}
+  - {fileID: -1705261664702724870}
+  Current: {fileID: 1228395143972712837}
 --- !u!114 &1228395143972712837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,6 +947,7 @@ MonoBehaviour:
     - Line
     - Speaker
     - RequireButtonPress
+    - BaseDelay
     values:
     - _fieldName: In
       _node: {fileID: 1969141118289615508}
@@ -906,8 +1003,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: BaseDelay
+      _node: {fileID: 1969141118289615508}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: WOW ! This is another test dialogue.
+  BaseDelay: 0.1
   RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
@@ -932,6 +1039,7 @@ MonoBehaviour:
     - Out
     - Speaker
     - RequireButtonPress
+    - BaseDelay
     values:
     - _fieldName: In
       _node: {fileID: 2667965517957596827}
@@ -939,7 +1047,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: -2197540371915675659}
+        node: {fileID: -1705261664702724870}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -987,8 +1095,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: BaseDelay
+      _node: {fileID: 2667965517957596827}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: dfsg
+  BaseDelay: 0.1
   RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default
@@ -1013,6 +1131,7 @@ MonoBehaviour:
     - Line
     - Speaker
     - RequireButtonPress
+    - BaseDelay
     values:
     - _fieldName: In
       _node: {fileID: 3297598478564297285}
@@ -1068,8 +1187,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: BaseDelay
+      _node: {fileID: 3297598478564297285}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   IsSynchronous: 1
   Line: I am going to wait a bit before saying the next thing...
+  BaseDelay: 0.1
   RequireButtonPress: 1
   Speaker: {fileID: 11400000, guid: 04601396228ad8f45a95e98d1c54d4dd, type: 2}
   Emotion: Default

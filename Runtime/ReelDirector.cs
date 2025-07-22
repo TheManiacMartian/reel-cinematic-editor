@@ -27,8 +27,15 @@ namespace Martian.Reel
         }
 
         [SerializeField] protected KeyCode _reelInput;
+
+        [SerializeField] private GameObject _dialogueInputPrompt;
+
         [SerializeField] private List<ReelDialogueView> _views;
         [SerializeField] private ReelCamera _reelCamera;
+
+        private List<Coroutine> _reelGraphCoroutines = new List<Coroutine>();
+
+        private Dictionary<string, ReelNode> _eventPortals = new Dictionary<string, ReelNode>();
 
         /// <summary>
         /// This input action indicates the player pressing a "continue" button.
@@ -58,7 +65,14 @@ namespace Martian.Reel
                 {
                     OnReelInput?.Invoke();
                 }
+
             }
+
+            /*foreach(var pair in _eventPortals)
+            {
+                Debug.Log(pair.Key + ": " + pair.Value);
+            }*/
+
         }
 
         /// <summary>
@@ -90,13 +104,13 @@ namespace Martian.Reel
             OnReelStart?.Invoke();
 
             // start the reel
-            StartCoroutine(reelGraph.DoReel(this, OnReelComplete));
+            _reelGraphCoroutines.Add(StartCoroutine(reelGraph.DoReel(this, OnReelComplete)));
 
         }
 
         public void StartAsyncReelNode(ReelNode node)
         {
-            StartCoroutine(node.NodeSequence(this));
+            _reelGraphCoroutines.Add(StartCoroutine(node.NodeSequence(this)));
         }
 
         private void OnReelComplete()
@@ -108,6 +122,9 @@ namespace Martian.Reel
 
             // stop camera
             _reelCamera.gameObject.SetActive(false);
+
+            // clear all coroutines
+            _reelGraphCoroutines.Clear();
 
             // invoke event
             OnReelEnd?.Invoke();
@@ -124,15 +141,59 @@ namespace Martian.Reel
             }
         }
 
-        public void TriggerEvent(string eventName)
-        {
-            OnEventTriggered?.Invoke(eventName);
-        }
-
         public bool GetIsReelRunning()
         {
             return _currentGraph != null;
         }
+
+        #region Events
+
+        public void TriggerEvent(string eventName)
+        {
+            OnEventTriggered?.Invoke(eventName);
+
+            // if the event is apart of a portal, we will activate the portal
+            if(_eventPortals.ContainsKey(eventName))
+            {
+                TriggerEventPortal(eventName);
+            }
+        }
+
+        public void AddEventPortal(string eventName, ReelNode node)
+        {
+            if(_eventPortals.ContainsKey(eventName))
+            {
+                _eventPortals[eventName] = node;
+            }
+            else
+            {
+                _eventPortals.Add(eventName, node);
+            }
+        }
+
+        private void TriggerEventPortal(string eventName)
+        {
+            foreach(var coroutine in _reelGraphCoroutines)
+            {
+                StopCoroutine(coroutine);
+            }
+
+            // clear all coroutines
+            _reelGraphCoroutines.Clear();
+
+            // clear dialogue information
+            UpdateDialogueInformation(new Dictionary<string, string>());
+
+            // stop camera
+            _reelCamera.gameObject.SetActive(false);
+
+            _reelGraphCoroutines.Add(StartCoroutine(_currentGraph.DoReel(_eventPortals[eventName], this, OnReelComplete)));
+
+            // remove from the event portals
+            _eventPortals.Remove(eventName);
+        }
+
+        #endregion
 
         #region Camera
 
@@ -172,6 +233,18 @@ namespace Martian.Reel
 
 
             return null;
+        }
+
+        #endregion
+
+        #region Dialogue
+
+        public void SetPromptShow(bool show)
+        {
+            if(_dialogueInputPrompt)
+            {
+                _dialogueInputPrompt.SetActive(show);
+            }
         }
 
         #endregion

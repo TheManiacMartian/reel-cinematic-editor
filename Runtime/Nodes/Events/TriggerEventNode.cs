@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using XNode;
 
-namespace Martian.Reel
+namespace Martian.Reel.Events
 {
     public class TriggerEventNode : ReelNode
     {
