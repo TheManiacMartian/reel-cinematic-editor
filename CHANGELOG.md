@@ -1,3 +1,7 @@
+## [1.3.8] - 2025-07-23
+### Build Error Fix
+- Fixed some build errors with some imports
+
 ## [1.3.8] - 2025-07-22
 ### Event Portals Fix
 - Fixed Event Portals so they get cleared and won't run after the graph is completed.
