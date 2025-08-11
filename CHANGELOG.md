@@ -1,3 +1,7 @@
+## [1.3.11] - 2025-07-23
+### Get current reel function
+- Self explanatory, replaces "GetReelIsRunning"
+
 ## [1.3.10] - 2025-07-23
 ### Stop Reel Option
 - Can now call "StopReel" to stop the reel midway through.

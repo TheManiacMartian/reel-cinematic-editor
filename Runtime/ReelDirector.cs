@@ -116,7 +116,6 @@ namespace Martian.Reel
             if(_currentGraph != null)
             {
                 OnReelComplete();
-
             }
         }
 
@@ -156,9 +155,9 @@ namespace Martian.Reel
             }
         }
 
-        public bool GetIsReelRunning()
+        public ReelGraph GetCurrentReelRunning()
         {
-            return _currentGraph != null;
+            return _currentGraph;
         }
 
         #region Events

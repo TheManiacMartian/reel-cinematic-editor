@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Martian.Reel;
 
 namespace Martian.Reel.Samples
 {
@@ -11,7 +12,7 @@ namespace Martian.Reel.Samples
 
         override public void Interact()
         {
-            if (!ReelDirector.Instance.GetIsReelRunning())
+            if (ReelDirector.Instance.GetCurrentReelRunning() != null)
             {
                 ReelDirector.Instance.StartReel(_selectedGraph);
 
