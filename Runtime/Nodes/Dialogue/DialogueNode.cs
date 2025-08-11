@@ -16,6 +16,11 @@ namespace Martian.Reel.Dialogue
         [Input] public float BaseDelay = 0.1f;
         [Input] public bool RequireButtonPress = true;
 
+        /// <summary>
+        /// Skips the first button press and instead triggers the skip event
+        /// </summary>
+        //[Input] public bool SkipPress = false;
+
         [Header("Character Settings")]
         [Input] public ReelCharacter Speaker;
         public string Emotion = "Default";

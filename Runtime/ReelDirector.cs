@@ -108,6 +108,18 @@ namespace Martian.Reel
 
         }
 
+        /// <summary>
+        /// Stops the current reel graph
+        /// </summary>
+        public void StopReel()
+        {
+            if(_currentGraph != null)
+            {
+                OnReelComplete();
+
+            }
+        }
+
         public void StartAsyncReelNode(ReelNode node)
         {
             _reelGraphCoroutines.Add(StartCoroutine(node.NodeSequence(this)));

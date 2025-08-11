@@ -1,3 +1,7 @@
+## [1.3.10] - 2025-07-23
+### Stop Reel Option
+- Can now call "StopReel" to stop the reel midway through.
+
 ## [1.3.8] - 2025-07-23
 ### Build Error Fix
 - Fixed some build errors with some imports

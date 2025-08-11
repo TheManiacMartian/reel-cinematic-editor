@@ -7,5 +7,9 @@ namespace Martian.Reel
     public abstract class ReelDialogueView : MonoBehaviour
     {
         public abstract void ViewUpdate(Dictionary<string, string> dialogueInfo);
+        public virtual void OnSkipCalled()
+        {
+
+        }
     }
 }
