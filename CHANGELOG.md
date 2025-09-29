@@ -1,3 +1,7 @@
+## [1.3.12] - 2025-07-23
+### Fix reel stop
+- Stops all reel node coroutines if the reel is stopped midway through.
+
 ## [1.3.11] - 2025-07-23
 ### Get current reel function
 - Self explanatory, replaces "GetReelIsRunning"

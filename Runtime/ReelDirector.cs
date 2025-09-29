@@ -135,6 +135,12 @@ namespace Martian.Reel
             _reelCamera.gameObject.SetActive(false);
 
             // clear all coroutines
+
+            foreach(var coroutine in _reelGraphCoroutines)
+            {
+                StopCoroutine(coroutine);
+            }
+
             _reelGraphCoroutines.Clear();
 
             // invoke event
