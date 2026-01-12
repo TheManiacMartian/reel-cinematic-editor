@@ -5,7 +5,7 @@
 # Reel Cinematic Editor
 A node-based tool for creating dialogue trees and cinematic scenes in Unity. Easily manage branching narratives and character interactions with a visual, drag-and-drop interface, little to no coding required. Ideal for building immersive storytelling in your games.
 
-**USED IN PRODUCTION: ** [FEED MY MECH](https://store.steampowered.com/app/3906110/FEED_MY_MECH/)
+**USED IN PRODUCTION:** [FEED MY MECH](https://store.steampowered.com/app/3906110/FEED_MY_MECH/)
 
 ## Installing with Unity Package Manager
 *(Requires Unity version 2022.1 or above)*
